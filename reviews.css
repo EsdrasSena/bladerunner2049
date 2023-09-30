@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Play", sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background: linear-gradient(72deg, black 1%, rgb(45, 1, 63) 99%);
+  color: aliceblue;
+}
+
+.title {
+  background-color: black;
+  box-shadow: 1px 1px 5px #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 90px;
+}
+
+nav {
+  width: 60%;
+}
+ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 20px;
+}
+li {
+  list-style: none;
+  color: aliceblue;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: "Play", sans-serif;
+}
+
+li:hover {
+  color: rgb(34 211 238);
+}
+
+.title img {
+  padding: 1rem;
+  height: 6rem;
+  display: flex;
+  cursor: pointer;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.card {
+  margin-top: 5rem;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 40px;
+  box-shadow: 2px 2px 5px aliceblue;
+  border-radius: 20px;
+}
+
+.user {
+  width: 100px;
+  border-radius: 50%;
+  height: 100px;
+  box-shadow: -1px 1px 8px rgb(253, 253, 253);
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 5px;
+}
+
+.star {
+  width: 20px;
+}
+
+p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: rgb(117, 112, 119);
+}
+
+footer {
+  height: 5rem;
+  margin: 0 50px;
+  margin-top: 2.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+span {
+  color: aliceblue;
+  font-family: "Play", sans-serif;
+}
+
+.footer-navigation {
+  display: none;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+    margin: 0 50px;
+    grid-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .footer-navigation {
+    display: block;
+  }
+
+  .cards {
+    grid-gap: 10px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  footer {
+    height: 10rem;
+    margin-top: 50px;
+  }
+}
